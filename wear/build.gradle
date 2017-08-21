@@ -5,8 +5,8 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "mind.chan.mean.watchchild"
-        minSdkVersion 21
-        targetSdkVersion 26
+        minSdkVersion 19
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
     }
