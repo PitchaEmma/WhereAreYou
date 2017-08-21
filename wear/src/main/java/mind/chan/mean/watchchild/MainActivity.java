@@ -20,15 +20,27 @@ import java.util.Random;
 
 public class MainActivity extends Activity {
 
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        showText("Master UNG");
 
     }   // Main Method
+
+    private void showText(final String strShowText) {
+        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
+        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
+            @Override
+            public void onLayoutInflated(WatchViewStub stub) {
+                mTextView = (TextView) stub.findViewById(R.id.text);
+                mTextView.setText(strShowText);
+            }
+        });
+    }
 
 
 }   // Main Class
